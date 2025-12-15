@@ -5,10 +5,10 @@ const Login = () => {
     <div className='w-screen px-30 py-20 gap-14 flex justify-center items-center h-screen bg-white'>
 
 
-        <div className='w-[40%] px-16 py-6 border border-gray-200 rounded-xl  flex flex-col justify-start items-center bg-whitew h-full '>
+        <div className='w-1/3 px-7 py-6 border border-gray-200 rounded-xl  flex flex-col justify-start items-center bg-whitew h-full '>
         <div className='flex justify-center items-center'>
           <div className='w-7 h-7'><img src="../../public/img/logo/Sign-Up/Group.svg" alt="" /></div>
-           <h1 className='text-2xl text-[#FF321F] font-bold italic '>CTRMExpertPlatform</h1>
+           <h1 className='text-2xlw text-[]   text-[#FF321F] font-bold italic '>CTRMExpertPlatform</h1>
         </div>
 
           <h2 className='text-lg py-3 font-semibold '>Welcome Back!</h2>
@@ -40,12 +40,12 @@ const Login = () => {
 
 <div className='flex flex-col w-full gap-2'>
 
-<div className='w-full h-8 flex  border rounded-sm border-gray-500 justify-center items-center'>
+<div className='w-full h-8 flex  border rounded-sm border-gray-200 justify-center items-center'>
 <div className='w-6 h-4'><img src="../../public/img/logo/Sign-Up/git.svg" alt="" /></div>
 <li className=' list-none  text-xs ' >Continue with LinkedIn</li>
 </div>
 
-<div className='w-full h-8 flex  border rounded-sm border-gray-500 justify-center items-center'>
+<div className='w-full h-8 flex  border rounded-sm border-gray-200 justify-center items-center'>
 <div className='w-6 h-4'><img src="../../public/img/logo/Sign-Up/Chrome.svg" alt="" /></div>
 <li className=' list-none  text-xs ' >Continue with LinkedIn</li>
 </div>
@@ -109,6 +109,14 @@ const Login = () => {
 
 
     </div>
+
+
+
+
+
+
+
+
   )
 }
 
