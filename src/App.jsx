@@ -4,16 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Login from './page/Login';
-
+import Onboarding from './page/Onboarding';
 function App() {
- 
+
 
   return (
     <>
-       <Routes>
-      <Route path="/" element={<Login />} />
-     
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Onboarding />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </>
   )
 }
