@@ -1,9 +1,9 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom"; // <-- added
+import { useNavigate } from "react-router-dom"; // 
 import Logo from '../part/Logo.jsx';
 
 const Login = () => {
-  const navigate = useNavigate(); // <-- initialize navigate
+  const navigate = useNavigate(); 
 
   return (
     <div className='w-screen h-screen flex-col flex'>
@@ -39,7 +39,7 @@ const Login = () => {
               Forgot password?
             </div>
 
-            {/* Updated Sign In button to navigate */}
+          
             <button
               onClick={() => navigate("/onboarding")}
               className='w-full text-sm h-8 text-white rounded-sm bg-[#FF321F]'

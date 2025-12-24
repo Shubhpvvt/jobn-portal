@@ -61,7 +61,7 @@ const Onboarding = () => {
                     <h2 className="text-xl font-semibold mb-6">Onboarding Progress</h2>
 
                     <div className="flex items-center justify-between">
-                        {/* Step 1 */}
+                     
                         <div className="flex items-center gap-2">
                             <div className="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center text-sm font-medium">
                                 1
@@ -73,7 +73,7 @@ const Onboarding = () => {
 
                         <div className="flex-1 h-px bg-gray-300 mx-4" />
 
-                        {/* Step 2 */}
+                      
                         <div className="flex items-center gap-2">
                             <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
                                 2
@@ -85,7 +85,7 @@ const Onboarding = () => {
 
                         <div className="flex-1 h-px bg-gray-300 mx-4" />
 
-                        {/* Step 3 */}
+                     
                         <div className="flex items-center gap-2">
                             <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
                                 3
@@ -97,7 +97,6 @@ const Onboarding = () => {
 
                         <div className="flex-1 h-px bg-gray-300 mx-4" />
 
-                        {/* Step 4 */}
                         <div className="flex items-center gap-2">
                             <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
                                 4
