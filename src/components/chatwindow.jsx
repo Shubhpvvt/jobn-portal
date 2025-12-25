@@ -5,7 +5,7 @@ const ChatWindow = () => {
   return (
     <div className="flex flex-col h-full bg-white">
 
-      {/* HEADER (FIXED) */}
+     
       <div className="h-14 border-b px-6 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-3">
           <img src="https://i.pravatar.cc/40" className="w-9 h-9 rounded-full" />
@@ -19,10 +19,10 @@ const ChatWindow = () => {
         </div>
       </div>
 
-      {/* MESSAGES (ONLY THIS SCROLLS) */}
+     
       <div className="flex-1 overflow-y-auto p-6 bg-gray-50 space-y-6">
 
-        {/* Yesterday */}
+       
         <div className="flex items-center justify-center">
           <span className="text-xs text-gray-400">Yesterday</span>
         </div>
@@ -40,7 +40,7 @@ const ChatWindow = () => {
           </div>
         </div>
 
-        {/* Today */}
+      
         <div className="flex items-center justify-center">
           <span className="text-xs text-gray-400">Today</span>
         </div>

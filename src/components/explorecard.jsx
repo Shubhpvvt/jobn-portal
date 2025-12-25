@@ -4,7 +4,7 @@ const ExploreCard = ({ name, role, company, image, tags }) => {
   return (
     <div className="bg-white border rounded-xl p-6 flex flex-col h-full">
 
-      {/* TOP CONTENT */}
+      
       <div className="flex flex-col items-center text-center flex-1">
 
         <img
@@ -17,7 +17,7 @@ const ExploreCard = ({ name, role, company, image, tags }) => {
         <p className="text-sm text-gray-600 mt-1">{role}</p>
         <p className="text-xs text-gray-400 mb-4">{company}</p>
 
-        {/* TAGS */}
+      
         <div className="flex flex-wrap justify-center gap-2 mb-6">
           {tags.map((tag, i) => (
             <span
@@ -30,7 +30,7 @@ const ExploreCard = ({ name, role, company, image, tags }) => {
         </div>
       </div>
 
-      {/* BUTTON FIXED AT BOTTOM */}
+     
       <button className="mt-auto bg-red-500 hover:bg-red-600 text-white py-2 rounded text-sm">
         Connect
       </button>

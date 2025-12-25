@@ -59,6 +59,34 @@ const jobs = [
     skills: ["Confirmations", "Settlements"],
     level: "Entry Level",
   },
+  {
+  company: "Apex Consulting · Calgary, AB",
+  title: "CTRM Project Manager",
+  match: 95,
+  description:
+    "Lead end-to-end CTRM system implementation projects. Requires strong project management skills and Agile experience.",
+  skills: ["Project Management", "Agile", "Stakeholder Management"],
+  level: "Senior Level",
+},
+{
+  company: "PowerGrid Trading · Dallas, TX",
+  title: "Commodity Trader - Power Desk",
+  match: 78,
+  description:
+    "Seeking an experienced commodity trader for our power desk. Analyze market trends and execute trades.",
+  skills: ["Power Trading", "Market Analysis", "Risk Management"],
+  level: "Mid Level",
+},
+{
+  company: "SecureIT Solutions · Houston, TX",
+  title: "System Administrator - CTRM",
+  match: 82,
+  description:
+    "Maintain and support critical CTRM infrastructure. Ideal candidate will have strong server and networking skills.",
+  skills: ["Windows Server", "Linux", "Networking"],
+  level: "Entry Level",
+}
+
 ];
 
 const Opportunities = () => {

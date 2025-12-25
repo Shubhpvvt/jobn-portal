@@ -3,7 +3,7 @@ import { FiSearch, FiSettings } from "react-icons/fi";
 
 const ExploreTopbar = () => {
   return (
-    <div className="h-14 bg-white border-b flex items-center px-8">
+    <div className="h-14 bg-white border-b flex items-center px--8">
 
       
       <div className="absolute left-1/2 -translate-x-1/2 flex gap-6 text-sm font-medium text-gray-700">
