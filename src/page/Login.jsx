@@ -1,34 +1,44 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import Logo from '../part/Logo.jsx'
 
 const Login = () => {
+  const navigate = useNavigate();   // ✅ ROUTING ENABLE
+
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
 
       {/* MAIN CONTENT */}
-      <div className="
-        flex-1 w-full
-        flex justify-center items-center
-        px-6 py-10
-        md:px-16 md:py-16
-      ">
-
-        <div className="
-          w-full max-w-6xl
-          flex flex-col lg:flex-row
-          gap-10
-          items-center
-        ">
+      <div
+        className="
+          flex-1 w-full
+          flex justify-center items-center
+          px-6 py-10
+          md:px-16 md:py-16
+        "
+      >
+        {/* 👉 RIGHT SHIFT HERE */}
+        <div
+          className="
+            w-full max-w-6xl
+            flex flex-col lg:flex-row
+            gap-10
+            items-center
+            lg:ml-24        /* 👈 right shift */
+          "
+        >
 
           {/* LEFT CARD */}
-          <div className="
-            w-full lg:w-1/3
-            px-6 py-6
-            border border-gray-200
-            rounded-xl
-            flex flex-col items-center
-            bg-white
-          ">
+          <div
+            className="
+              w-full lg:w-1/3
+              px-6 py-6
+              border border-gray-200
+              rounded-xl
+              flex flex-col items-center
+              bg-white
+            "
+          >
             <Logo />
             <h2 className="text-lg py-2 font-semibold">
               Welcome Back!
@@ -58,7 +68,11 @@ const Login = () => {
                 Forgot password?
               </div>
 
-              <button className="w-full text-sm h-9 text-white rounded bg-[#FF321F]">
+              {/* ✅ ROUTING FIX */}
+              <button
+                onClick={() => navigate("/onboarding")}
+                className="w-full text-sm h-9 text-white rounded bg-[#FF321F]"
+              >
                 Sign In
               </button>
             </div>
@@ -86,14 +100,16 @@ const Login = () => {
           </div>
 
           {/* RIGHT IMAGE CARD */}
-          <div className="
-            w-full lg:w-1/2
-            rounded-2xl
-            bg-[#FFF1F0]
-            flex flex-col
-            justify-center items-center
-            px-6 py-10
-          ">
+          <div
+            className="
+              w-full lg:w-1/2
+              rounded-2xl
+              bg-[#FFF1F0]
+              flex flex-col
+              justify-center items-center
+              px-6 py-10
+            "
+          >
             <div className="w-full max-w-md h-64">
               <img
                 src="img/login.png"
@@ -116,15 +132,17 @@ const Login = () => {
       </div>
 
       {/* FOOTER */}
-      <div className="
-        w-full
-        flex flex-col md:flex-row
-        justify-between items-center
-        gap-4
-        px-6 md:px-20
-        py-4
-        text-sm
-      ">
+      <div
+        className="
+          w-full
+          flex flex-col md:flex-row
+          justify-between items-center
+          gap-4
+          px-6 md:px-20
+          py-4
+          text-sm
+        "
+      >
         <div className="flex gap-4">
           <h4>About</h4>
           <h4>Resources</h4>
