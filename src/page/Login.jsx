@@ -1,96 +1,102 @@
-import React from 'react';
-import { useNavigate } from "react-router-dom"; // 
-import Logo from '../part/Logo.jsx';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Logo from "../part/Logo.jsx";
 
 const Login = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
-    <div className='w-screen h-screen flex-col flex'>
-      <div className='w-screen px-30 flex-1 py-20 gap-14 phone:flex-col flex justify-center items-center phone:px-10 phone:h-fit bg-whitew'>
-        <div className='w-1/3 phone:w-full px-7 py-6 border border-gray-200 rounded-xl flex flex-col justify-start items-center bg-whitew h-full'>
+    <div className="min-h-screen w-full flex flex-col">
+
+      {/* ================= MAIN ================= */}
+      <div className="flex-1 flex flex-col md:flex-row justify-center items-center gap-10 px-4 sm:px-8 md:px-20 py-10">
+
+        {/* ===== LEFT LOGIN CARD ===== */}
+        <div className="w-full md:w-1/3 border border-gray-200 rounded-xl px-6 py-6 flex flex-col items-center">
           <Logo />
-          <h2 className='text-lg py-1.5 font-semibold'>Welcome Back!</h2>
 
-          <div className='flex flex-col w-full gap-2'>
-            <div className='flex h-[3.7rem] w-full flex-col gap-2'>
-              <label className='text-xs' htmlFor="username">Email</label>
+          <h2 className="text-lg py-2 font-semibold">Welcome Back!</h2>
+
+          <div className="flex flex-col w-full gap-4">
+            <div className="flex flex-col gap-1">
+              <label className="text-xs">Email</label>
               <input
-                className='outline-none px-2 w-full h-full text-xs border-2 rounded-sm border-gray-300'
-                placeholder='your.email@example.com'
-                type="text"
-                id='username'
-                name='username'
+                className="outline-none px-2 py-2 text-xs border rounded-sm border-gray-300"
+                placeholder="your.email@example.com"
               />
             </div>
 
-            <div className='flex h-[3.7rem] w-full flex-col gap-2'>
-              <label className='text-xs' htmlFor="password">Password</label>
+            <div className="flex flex-col gap-1">
+              <label className="text-xs">Password</label>
               <input
-                className='outline-none px-2 w-full h-full text-xs border-2 rounded-sm border-gray-300'
-                placeholder='Enter your password'
+                className="outline-none px-2 py-2 text-xs border rounded-sm border-gray-300"
+                placeholder="Enter your password"
                 type="password"
-                id='password'
-                name='password'
               />
             </div>
 
-            <div className='text-xs text-[#FF321F] text-right w-full'>
+            <div className="text-xs text-[#FF321F] text-right">
               Forgot password?
             </div>
 
-          
             <button
               onClick={() => navigate("/onboarding")}
-              className='w-full text-sm h-8 text-white rounded-sm bg-[#FF321F]'
+              className="w-full h-9 text-sm text-white rounded-sm bg-[#FF321F]"
             >
               Sign In
             </button>
           </div>
 
-          <div className='flex w-full py-2 justify-between items-center gap-3'>
-            <hr className='w-full' />OR<hr className='w-full' />
+          <div className="flex w-full py-4 items-center gap-2 text-xs">
+            <hr className="w-full" /> OR <hr className="w-full" />
           </div>
 
-          <div className='flex flex-col w-full gap-2'>
-            <div className='w-full h-8 flex border rounded-sm border-gray-200 justify-center items-center'>
-              <div className='w-6 h-4'><img src="img/logo/Sign-Up/git.svg" alt="" /></div>
-              <li className='list-none text-xs'>Continue with LinkedIn</li>
+          <div className="flex flex-col w-full gap-2">
+            <div className="h-9 border rounded-sm flex items-center justify-center gap-2">
+              <img src="img/logo/Sign-Up/git.svg" className="w-4" />
+              <span className="text-xs">Continue with LinkedIn</span>
             </div>
-            <div className='w-full h-8 flex border rounded-sm border-gray-200 justify-center items-center'>
-              <div className='w-6 h-4'><img src="img/logo/Sign-Up/Chrome.svg" alt="" /></div>
-              <li className='list-none text-xs'>Continue with Google</li>
+            <div className="h-9 border rounded-sm flex items-center justify-center gap-2">
+              <img src="img/logo/Sign-Up/Chrome.svg" className="w-4" />
+              <span className="text-xs">Continue with Google</span>
             </div>
           </div>
 
-          <div className='text-xs pt-5'>
-            Don't have an account? <span className='text-[#FF321F]'>Sign Up</span>
+          <div className="text-xs pt-4">
+            Don&apos;t have an account?{" "}
+            <span className="text-[#FF321F]">Sign Up</span>
           </div>
         </div>
 
-        <div className='w-1/2 phone:w-full phone:py-7 rounded-2xl bg-[#FFF1F0] flex flex-col justify-center items-center h-full'>
-          <div className='w-full px-10 object-contain h-80 phone:h-72'>
-            <img src="img/login.png" className='object-cover' alt="" />
-          </div>
-          <div className='text-center'>
-            <h3 className='font-bold py-3 text-lx'>Connect. Grow. Succeed.</h3>
-            <h4 className='text-xs w-72'>Your gateway to the CTRM/ETRM professional community.</h4>
-          </div>
+        {/* ===== RIGHT IMAGE ===== */}
+        <div className="w-full md:w-1/2 bg-[#FFF1F0] rounded-2xl p-6 flex flex-col items-center text-center">
+          <img
+            src="img/login.png"
+            className="h-60 object-contain"
+            alt=""
+          />
+          <h3 className="font-bold py-3 text-lg">
+            Connect. Grow. Succeed.
+          </h3>
+          <p className="text-xs max-w-xs">
+            Your gateway to the CTRM/ETRM professional community.
+          </p>
         </div>
       </div>
 
-      <div className='w-full h-10 flex phone:px-7 phone:h-32 phone:py-6 px-32 justify-between items-center'>
-        <div className='flex gap-4 text-sm justify-center items-center'>
-          <h4>About</h4>
-          <h4>Resources</h4>
-          <h4>Legal</h4>
+      {/* ================= FOOTER ================= */}
+      <footer className="flex flex-col sm:flex-row justify-between items-center gap-4 px-4 sm:px-10 md:px-32 py-4">
+        <div className="flex gap-4 text-sm">
+          <span>About</span>
+          <span>Resources</span>
+          <span>Legal</span>
         </div>
-        <div className='flex gap-10'>
-          <div><img src="img/logo/socal/linkedin.svg" alt="" /></div>
-          <div><img src="img/logo/socal/tuter.svg" alt="" /></div>
-          <div><img src="img/logo/socal/Vector.svg" alt="" /></div>
+        <div className="flex gap-6">
+          <img src="img/logo/socal/linkedin.svg" />
+          <img src="img/logo/socal/tuter.svg" />
+          <img src="img/logo/socal/Vector.svg" />
         </div>
-      </div>
+      </footer>
     </div>
   );
 };
