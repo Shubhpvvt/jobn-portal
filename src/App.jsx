@@ -17,10 +17,25 @@ function App() {
   return (
     <Routes>
 
-      <Route path="/" element={<Login />} />
-      <Route path="/login" element={<Login />} />
+      {/* ✅ LOGIN (FIXED LAYOUT ADD) */}
+      <Route
+        path="/"
+        element={
+          <FixedLayout>
+            <Login />
+          </FixedLayout>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <FixedLayout>
+            <Login />
+          </FixedLayout>
+        }
+      />
 
-      
+      {/* ✅ ONBOARDING */}
       <Route
         path="/onboarding"
         element={
@@ -30,6 +45,7 @@ function App() {
         }
       />
 
+      {/* ✅ DASHBOARD */}
       <Route
         path="/dashboard"
         element={
@@ -39,6 +55,7 @@ function App() {
         }
       />
 
+      {/* ✅ OTHER PAGES */}
       <Route
         path="/profile"
         element={
