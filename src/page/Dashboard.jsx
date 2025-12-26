@@ -4,7 +4,7 @@ import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
   return (
-    <div className="h-screen w-screen bg-gray-100 flex flex-col">
+    <div className="min-h-screen w-full bg-gray-100 flex flex-col">
 
       {/* TOPBAR */}
       <Topbar />
@@ -26,13 +26,12 @@ const Dashboard = () => {
           </ul>
         </div>
 
-        {/* MAIN CONTENT AREA */}
-        <div className="flex-1 p-6">
+        {/* MAIN CONTENT */}
+        <div className="flex-1 p-6 overflow-y-auto">
 
-          {/* PROFILE + QUICK ACTIONS (SAME ROW) */}
+          {/* PROFILE + QUICK ACTIONS */}
           <div className="flex items-start gap-4 mb-6">
 
-            {/* Profile Completion */}
             <div className="bg-white rounded-xl p-5 w-72">
               <h3 className="font-semibold mb-2">Profile Completion</h3>
               <p className="text-sm mb-2">75%</p>
@@ -43,7 +42,7 @@ const Dashboard = () => {
 
               <p className="text-gray-500 text-sm mt-3">
                 Complete Your Profile to unlock more features
-                and connect with relevant Opportunities
+                and connect with relevant opportunities
               </p>
 
               <p className="text-red-500 text-sm mt-3 cursor-pointer">
@@ -51,7 +50,6 @@ const Dashboard = () => {
               </p>
             </div>
 
-          
             <div className="bg-white rounded-xl p-5 w-72">
               <h3 className="font-semibold mb-4">Quick Actions</h3>
 
@@ -67,10 +65,9 @@ const Dashboard = () => {
                 </button>
               </div>
             </div>
-
           </div>
 
-          
+          {/* RECENT MESSAGES */}
           <div className="bg-white rounded-xl p-5 mb-6 max-w-[36rem]">
             <h3 className="font-semibold mb-4">Recent Messages</h3>
 
@@ -85,22 +82,27 @@ const Dashboard = () => {
             </div>
           </div>
 
-          
+          {/* SUGGESTED PROFESSIONALS */}
           <div className="bg-white rounded-xl p-5">
             <h3 className="font-semibold mb-4">Suggested Professionals</h3>
 
             <div className="grid grid-cols-3 gap-4 text-sm">
-              {["Eve Adams", "Frank Miller", "Grace Lee", "Harry Davis", "Ivy Chen", "Jack Wilson"].map(
-                (name) => (
-                  <div key={name} className="text-center">
-                    <div className="w-12 h-12 bg-gray-300 rounded-full mx-auto mb-2"></div>
-                    <p>{name}</p>
-                    <button className="mt-2 border border-red-500 text-red-500 px-3 py-1 rounded text-xs">
-                      Connect
-                    </button>
-                  </div>
-                )
-              )}
+              {[
+                "Eve Adams",
+                "Frank Miller",
+                "Grace Lee",
+                "Harry Davis",
+                "Ivy Chen",
+                "Jack Wilson",
+              ].map((name) => (
+                <div key={name} className="text-center">
+                  <div className="w-12 h-12 bg-gray-300 rounded-full mx-auto mb-2"></div>
+                  <p>{name}</p>
+                  <button className="mt-2 border border-red-500 text-red-500 px-3 py-1 rounded text-xs">
+                    Connect
+                  </button>
+                </div>
+              ))}
             </div>
 
             <p className="text-red-500 mt-4 cursor-pointer text-sm">

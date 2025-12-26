@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Onboarding = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen w-full flex flex-col bg-gray-50">
 
-     
+      {/* ================= HEADER ================= */}
       <header className="flex w-full justify-between items-center h-14 bg-[#FF321F] px-10">
         <div className="flex items-center gap-2">
           <div className="w-7 h-7">
@@ -30,9 +33,10 @@ const Onboarding = () => {
         </div>
       </header>
 
-      
+      {/* ================= MAIN ================= */}
       <main className="flex-1 w-full">
 
+        {/* ===== Progress ===== */}
         <div className="w-full max-w-5xl mx-auto px-10 py-6">
           <h2 className="text-xl font-semibold mb-6">
             Onboarding Progress
@@ -84,12 +88,12 @@ const Onboarding = () => {
           </div>
         </div>
 
-       
+        {/* ===== FORM SECTION ===== */}
         <div className="max-w-5xl mx-auto px-10 flex flex-row gap-8 items-start">
 
-          
+          {/* Left Form */}
           <div className="w-1/2">
-            <div className="w-full bg-white shadow-sm p-8">
+            <div className="w-full bg-white shadow-sm p-8 rounded-lg">
               <h2 className="text-xl font-semibold text-gray-900 mb-6">
                 Your Personal Details
               </h2>
@@ -116,8 +120,8 @@ const Onboarding = () => {
             </div>
           </div>
 
-         
-          <div className="w-1/2 p-8">
+          {/* Right Profile */}
+          <div className="w-1/2 p-8 bg-white shadow-sm rounded-lg">
             <h2 className="text-xl font-semibold text-gray-900 mb-8">
               Profile Picture
             </h2>
@@ -142,9 +146,20 @@ const Onboarding = () => {
           </div>
 
         </div>
+
+        {/* ===== NEXT BUTTON ===== */}
+        <div className="max-w-5xl mx-auto px-10 mt-8 flex justify-end">
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="bg-[#FF321F] text-white text-sm px-6 py-2 rounded-md hover:bg-red-600 transition"
+          >
+            Next
+          </button>
+        </div>
       </main>
 
-      <footer className="w-full flex flex-row items-center justify-between px-32 py-4 bg-white">
+      {/* ================= FOOTER ================= */}
+      <footer className="w-full flex flex-row items-center justify-between px-32 py-4 bg-white mt-8">
         <div className="flex gap-4 text-sm">
           <span>About</span>
           <span>Resources</span>
