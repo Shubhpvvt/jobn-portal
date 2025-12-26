@@ -3,43 +3,35 @@ import { useNavigate } from "react-router-dom";
 import Logo from '../part/Logo.jsx'
 
 const Login = () => {
-  const navigate = useNavigate();   // ✅ ROUTING ENABLE
+  const navigate = useNavigate();
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-white">
+    <div className="w-full min-h-screen flex flex-col bg-white overflow-x-auto">
 
       {/* MAIN CONTENT */}
-      <div
-        className="
-          flex-1 w-full
-          flex justify-center items-center
-          px-6 py-10
-          md:px-16 md:py-16
-        "
-      >
-        {/* 👉 RIGHT SHIFT HERE */}
-        <div
-          className="
-            w-full max-w-6xl
-            flex flex-col lg:flex-row
-            gap-10
-            items-center
-            lg:ml-24        /* 👈 right shift */
-          "
-        >
+      <div className="flex-1 w-full flex justify-center items-center px-10 py-10">
+        
+        {/* FORCE SAME LAYOUT EVERYWHERE */}
+        <div className="
+          min-w-[1100px]
+          max-w-[1100px]
+          flex flex-row
+          gap-12
+          items-center
+          ml-40
+        ">
 
           {/* LEFT CARD */}
-          <div
-            className="
-              w-full lg:w-1/3
-              px-6 py-6
-              border border-gray-200
-              rounded-xl
-              flex flex-col items-center
-              bg-white
-            "
-          >
+          <div className="
+            w-[380px]
+            px-6 py-6
+            border border-gray-200
+            rounded-xl
+            flex flex-col items-center
+            bg-white
+          ">
             <Logo />
+
             <h2 className="text-lg py-2 font-semibold">
               Welcome Back!
             </h2>
@@ -68,7 +60,6 @@ const Login = () => {
                 Forgot password?
               </div>
 
-              {/* ✅ ROUTING FIX */}
               <button
                 onClick={() => navigate("/onboarding")}
                 className="w-full text-sm h-9 text-white rounded bg-[#FF321F]"
@@ -100,17 +91,15 @@ const Login = () => {
           </div>
 
           {/* RIGHT IMAGE CARD */}
-          <div
-            className="
-              w-full lg:w-1/2
-              rounded-2xl
-              bg-[#FFF1F0]
-              flex flex-col
-              justify-center items-center
-              px-6 py-10
-            "
-          >
-            <div className="w-full max-w-md h-64">
+          <div className="
+            w-[520px]
+            rounded-2xl
+            bg-[#FFF1F0]
+            flex flex-col
+            justify-center items-center
+            px-6 py-10
+          ">
+            <div className="w-full h-72">
               <img
                 src="img/login.png"
                 className="w-full h-full object-cover rounded-xl"
@@ -132,17 +121,7 @@ const Login = () => {
       </div>
 
       {/* FOOTER */}
-      <div
-        className="
-          w-full
-          flex flex-col md:flex-row
-          justify-between items-center
-          gap-4
-          px-6 md:px-20
-          py-4
-          text-sm
-        "
-      >
+      <div className="w-full flex justify-between items-center px-20 py-4 text-sm">
         <div className="flex gap-4">
           <h4>About</h4>
           <h4>Resources</h4>
@@ -160,4 +139,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;
