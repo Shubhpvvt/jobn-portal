@@ -6,39 +6,48 @@ const Login = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen w-full flex flex-col bg-white">
 
-      {/* MAIN CONTENT */}
-      <div className="flex-1 w-full flex justify-center items-center py-16">
-
-        {/* FIXED DESKTOP WIDTH */}
-        <div className="w-[1100px] flex flex-row gap-12 items-center ml-40">
+      {/* MAIN */}
+      <div className="flex-1 flex justify-center items-center px-6 py-10">
+        <div className="
+          w-full max-w-6xl
+          flex flex-col lg:flex-row
+          gap-10
+          items-center
+        ">
 
           {/* LEFT LOGIN CARD */}
-          <div className="w-[380px] px-6 py-6 border border-gray-200 rounded-xl flex flex-col items-center bg-white">
+          <div className="
+            w-full max-w-md
+            border border-gray-200
+            rounded-xl
+            px-6 py-6
+            flex flex-col items-center
+            bg-white
+          ">
             <Logo />
 
-            <h2 className="text-lg py-2 font-semibold">
+            <h2 className="text-lg font-semibold py-2">
               Welcome Back!
             </h2>
 
-            <div className="flex flex-col w-full gap-3">
-
-              <div className="flex flex-col gap-1">
+            <div className="w-full flex flex-col gap-3">
+              <div>
                 <label className="text-xs">Email</label>
                 <input
                   type="text"
                   placeholder="your.email@example.com"
-                  className="px-3 h-10 text-xs border rounded border-gray-300 outline-none"
+                  className="w-full h-10 px-3 text-xs border rounded outline-none"
                 />
               </div>
 
-              <div className="flex flex-col gap-1">
+              <div>
                 <label className="text-xs">Password</label>
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className="px-3 h-10 text-xs border rounded border-gray-300 outline-none"
+                  className="w-full h-10 px-3 text-xs border rounded outline-none"
                 />
               </div>
 
@@ -48,17 +57,17 @@ const Login = () => {
 
               <button
                 onClick={() => navigate("/onboarding")}
-                className="h-9 bg-[#FF321F] text-white text-sm rounded"
+                className="h-9 bg-[#FF321F] text-white rounded text-sm"
               >
                 Sign In
               </button>
             </div>
 
-            <div className="flex w-full items-center gap-2 py-3 text-xs">
+            <div className="flex items-center w-full gap-2 py-3 text-xs">
               <hr className="flex-1" /> OR <hr className="flex-1" />
             </div>
 
-            <div className="flex flex-col w-full gap-2">
+            <div className="w-full flex flex-col gap-2">
               <div className="h-9 border rounded flex items-center justify-center gap-2">
                 <img src="img/logo/Sign-Up/git.svg" className="w-4" />
                 <span className="text-xs">Continue with LinkedIn</span>
@@ -70,21 +79,25 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="text-xs pt-5">
+            <div className="text-xs pt-4">
               Don&apos;t have an account?{" "}
               <span className="text-[#FF321F]">Sign Up</span>
             </div>
           </div>
 
-          {/* RIGHT IMAGE CARD */}
-          <div className="w-[520px] bg-[#FFF1F0] rounded-2xl px-8 py-10 flex flex-col items-center">
-            <div className="w-full h-72">
-              <img
-                src="img/login.png"
-                alt=""
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </div>
+          {/* RIGHT IMAGE SECTION */}
+          <div className="
+            w-full lg:w-1/2
+            bg-[#FFF1F0]
+            rounded-2xl
+            px-6 py-10
+            flex flex-col items-center
+          ">
+            <img
+              src="img/login.png"
+              alt=""
+              className="w-full max-w-md h-64 object-cover rounded-xl"
+            />
 
             <div className="text-center mt-4">
               <h3 className="font-bold text-lg">
@@ -100,7 +113,15 @@ const Login = () => {
       </div>
 
       {/* FOOTER */}
-      <footer className="w-full flex justify-between items-center px-20 py-4 text-sm">
+      <footer className="
+        w-full
+        flex flex-col md:flex-row
+        justify-between items-center
+        gap-4
+        px-6 md:px-20
+        py-4
+        text-sm
+      ">
         <div className="flex gap-4">
           <span>About</span>
           <span>Resources</span>
