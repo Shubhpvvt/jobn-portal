@@ -4,21 +4,23 @@ import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen w-full bg-gray-100 flex flex-col">
+    <div className="h-screen w-full bg-gray-100 flex flex-col overflow-hidden">
 
       {/* TOPBAR */}
       <Topbar />
 
       {/* BODY */}
-      <div className="flex flex-1">
+      <div className="flex flex-1 overflow-hidden">
 
         {/* SIDEBAR */}
         <Sidebar />
 
-        {/* ANALYTICS */}
-        <div className="w-64 bg-white border-r p-5">
-          <h3 className="font-semibold mb-4">Your Analytics</h3>
-          <ul className="text-sm space-y-3 text-gray-600">
+        {/* ANALYTICS (RIGHT OF SIDEBAR) */}
+        <div className="w-56 bg-white border-r p-4 hidden lg:block">
+          <h3 className="font-semibold mb-3 text-sm">
+            Your Analytics
+          </h3>
+          <ul className="text-xs space-y-2 text-gray-600">
             <li>Connections</li>
             <li>Jobs Posted</li>
             <li>Certifications</li>
@@ -27,33 +29,38 @@ const Dashboard = () => {
         </div>
 
         {/* MAIN CONTENT */}
-        <div className="flex-1 p-6 overflow-y-auto">
+        <div className="flex-1 p-4 overflow-y-auto">
 
           {/* PROFILE + QUICK ACTIONS */}
-          <div className="flex items-start gap-4 mb-6">
+          <div className="flex flex-col md:flex-row gap-4 mb-4">
 
-            <div className="bg-white rounded-xl p-5 w-72">
-              <h3 className="font-semibold mb-2">Profile Completion</h3>
-              <p className="text-sm mb-2">75%</p>
+            {/* PROFILE COMPLETION */}
+            <div className="bg-white rounded-xl p-4 w-full md:w-[260px]">
+              <h3 className="font-semibold text-sm mb-1">
+                Profile Completion
+              </h3>
+              <p className="text-xs mb-2">75%</p>
 
               <div className="h-2 bg-gray-200 rounded">
                 <div className="h-2 w-[75%] bg-red-500 rounded"></div>
               </div>
 
-              <p className="text-gray-500 text-sm mt-3">
-                Complete Your Profile to unlock more features
-                and connect with relevant opportunities
+              <p className="text-gray-500 text-xs mt-2">
+                Complete your profile to unlock more features.
               </p>
 
-              <p className="text-red-500 text-sm mt-3 cursor-pointer">
+              <p className="text-red-500 text-xs mt-2 cursor-pointer">
                 Complete Your Profile
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-5 w-72">
-              <h3 className="font-semibold mb-4">Quick Actions</h3>
+            {/* QUICK ACTIONS */}
+            <div className="bg-white rounded-xl p-4 w-full md:w-[260px]">
+              <h3 className="font-semibold text-sm mb-3">
+                Quick Actions
+              </h3>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2 text-xs">
                 <button className="bg-red-500 text-white py-2 rounded">
                   Edit Profile
                 </button>
@@ -65,13 +72,16 @@ const Dashboard = () => {
                 </button>
               </div>
             </div>
+
           </div>
 
           {/* RECENT MESSAGES */}
-          <div className="bg-white rounded-xl p-5 mb-6 max-w-[36rem]">
-            <h3 className="font-semibold mb-4">Recent Messages</h3>
+          <div className="bg-white rounded-xl p-4 mb-4 max-w-[420px]">
+            <h3 className="font-semibold text-sm mb-3">
+              Recent Messages
+            </h3>
 
-            <div className="space-y-3 text-sm">
+            <div className="space-y-2 text-xs">
               <p><b>Alice Johnson</b> – Q3 report looks promising.</p>
               <p><b>Bob Williams</b> – Let’s discuss new project.</p>
               <p><b>Charlie Green</b> – Need input on market trends.</p>
@@ -83,10 +93,12 @@ const Dashboard = () => {
           </div>
 
           {/* SUGGESTED PROFESSIONALS */}
-          <div className="bg-white rounded-xl p-5">
-            <h3 className="font-semibold mb-4">Suggested Professionals</h3>
+          <div className="bg-white rounded-xl p-4 max-w-[640px]">
+            <h3 className="font-semibold text-sm mb-3">
+              Suggested Professionals
+            </h3>
 
-            <div className="grid grid-cols-3 gap-4 text-sm">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs">
               {[
                 "Eve Adams",
                 "Frank Miller",
@@ -96,16 +108,16 @@ const Dashboard = () => {
                 "Jack Wilson",
               ].map((name) => (
                 <div key={name} className="text-center">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full mx-auto mb-2"></div>
+                  <div className="w-10 h-10 bg-gray-300 rounded-full mx-auto mb-1"></div>
                   <p>{name}</p>
-                  <button className="mt-2 border border-red-500 text-red-500 px-3 py-1 rounded text-xs">
+                  <button className="mt-1 border border-red-500 text-red-500 px-3 py-1 rounded text-[11px]">
                     Connect
                   </button>
                 </div>
               ))}
             </div>
 
-            <p className="text-red-500 mt-4 cursor-pointer text-sm">
+            <p className="text-red-500 mt-3 cursor-pointer text-xs">
               See All Professionals
             </p>
           </div>

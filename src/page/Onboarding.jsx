@@ -5,173 +5,123 @@ const Onboarding = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-gray-50">
+    <div className="min-h-screen w-full flex flex-col bg-white">
 
-      {/* ================= HEADER ================= */}
-      <header className="flex w-full justify-between items-center h-14 bg-[#FF321F] px-10">
+     
+      <header className="w-full h-14 bg-[#FF321F] flex justify-between items-center px-10">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7">
-            <img src="img/logo/Sign-Up/Group.svg" alt="logo" />
-          </div>
-          <h1 className="text-2xl text-white font-bold italic">
+          <img src="img/logo/Sign-Up/Group.svg" className="w-7 h-7" />
+          <h1 className="text-white font-bold italic text-xl">
             CTRMExpertPlatform
           </h1>
         </div>
-
-        <h2 className="text-white text-sm font-medium">Home</h2>
-
-        <div className="flex items-center gap-3">
-          <div className="bg-slate-500 w-9 h-9 flex items-center justify-center rounded-xl">
-            <img src="img/logo/hd/admin.svg" alt="" className="w-4 h-4" />
+        <span className="text-white text-sm">Home</span>
+        <div className="flex gap-3">
+          <div className="w-9 h-9 bg-slate-500 rounded-xl flex items-center justify-center">
+            <img src="img/logo/hd/admin.svg" className="w-4 h-4" />
           </div>
-
-          <div className="bg-slate-500 w-9 h-9 flex items-center justify-center rounded-xl">
-            <img src="img/logo/hd/Bell.svg" alt="" className="w-4 h-4" />
+          <div className="w-9 h-9 bg-slate-500 rounded-xl flex items-center justify-center">
+            <img src="img/logo/hd/Bell.svg" className="w-4 h-4" />
           </div>
-
-          <div className="w-9 h-9 rounded-full bg-white" />
+          <div className="w-9 h-9 bg-white rounded-full" />
         </div>
       </header>
 
-      {/* ================= MAIN ================= */}
-      <main className="flex-1 w-full">
+     
+      <main className="flex-1">
 
-        {/* ===== Progress ===== */}
-        <div className="w-full max-w-5xl mx-auto px-10 py-6">
-          <h2 className="text-xl font-semibold mb-6">
-            Onboarding Progress
-          </h2>
-
-          <div className="flex items-center justify-between">
-
+        <div className="max-w-6xl mx-auto px-10 py-4">
+          <h2 className="text-lg font-semibold mb-3">Onboarding Progress</h2>
+          <div className="flex items-center justify-between text-sm">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center text-sm font-medium">
-                1
-              </div>
-              <span className="text-sm font-medium text-gray-800">
-                Basic Info
-              </span>
+              <div className="w-7 h-7 rounded-full bg-red-500 text-white flex items-center justify-center">1</div>
+              <span>Basic Info</span>
             </div>
-
-            <div className="flex-1 h-px bg-gray-300 mx-4" />
-
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
-                2
-              </div>
-              <span className="text-sm font-medium text-gray-600">
-                CTRM Expertise
-              </span>
-            </div>
-
-            <div className="flex-1 h-px bg-gray-300 mx-4" />
-
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
-                3
-              </div>
-              <span className="text-sm font-medium text-gray-600">
-                Experience & Projects
-              </span>
-            </div>
-
-            <div className="flex-1 h-px bg-gray-300 mx-4" />
-
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
-                4
-              </div>
-              <span className="text-sm font-medium text-gray-600">
-                Work Preferences
-              </span>
-            </div>
+            <div className="flex-1 h-px bg-gray-300 mx-3" />
+            <span className="text-gray-400">2 CTRM Expertise</span>
+            <div className="flex-1 h-px bg-gray-300 mx-3" />
+            <span className="text-gray-400">3 Experience</span>
+            <div className="flex-1 h-px bg-gray-300 mx-3" />
+            <span className="text-gray-400">4 Preferences</span>
           </div>
         </div>
 
-        {/* ===== FORM SECTION ===== */}
-        <div className="max-w-5xl mx-auto px-10 flex flex-row gap-8 items-start">
+        <div className="max-w-6xl mx-auto px-10 flex gap-8 items-start">
 
-          {/* Left Form */}
-          <div className="w-1/2">
-            <div className="w-full bg-white shadow-sm p-8 rounded-lg">
-              <h2 className="text-xl font-semibold text-gray-900 mb-6">
-                Your Personal Details
-              </h2>
+          
+          <div className="w-[55%] h-[380px] border rounded-xl p-4 overflow-hidden">
 
-              <div className="space-y-5">
-                {[
-                  { label: "Full Name", placeholder: "John Doe" },
-                  { label: "Location", placeholder: "London, UK" },
-                  { label: "Current Role", placeholder: "CTRM Business Analyst" },
-                  { label: "Company", placeholder: "Acme Energy Solutions" },
-                ].map((field, i) => (
-                  <div key={i}>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {field.label}
-                    </label>
-                    <input
-                      type="text"
-                      placeholder={field.placeholder}
-                      className="w-full rounded-lg bg-gray-200 px-4 py-3 text-sm text-gray-700 focus:outline-none"
-                    />
-                  </div>
-                ))}
-              </div>
+            <h3 className="font-semibold mb-4">Your Personal Details</h3>
+
+            <div className="space-y-3 text-sm">
+              {["Full Name", "Location", "Current Role", "Company"].map((label, i) => (
+                <div key={i}>
+                  <label className="block mb-1">{label}</label>
+                  <input
+                    className="w-full bg-gray-200 px-3 py-2 rounded"
+                    placeholder={
+                      label === "Full Name"
+                        ? "John Doe"
+                        : label === "Location"
+                        ? "London, UK"
+                        : label === "Current Role"
+                        ? "CTRM Business Analyst"
+                        : "Acme Energy Solutions"
+                    }
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Right Profile */}
-          <div className="w-1/2 p-8 bg-white shadow-sm rounded-lg">
-            <h2 className="text-xl font-semibold text-gray-900 mb-8">
-              Profile Picture
-            </h2>
+          <div className="w-[40%] border rounded-xl p-4 flex flex-col items-center">
+            <h3 className="font-semibold mb-4">Profile Picture</h3>
 
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-200">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <button className="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-sm font-medium text-gray-800 px-4 py-2 rounded-lg">
-                Upload Photo
-              </button>
-
-              <p className="text-xs text-gray-500">
-                JPG or PNG, max 5MB
-              </p>
+            <div className="w-20 h-20 rounded-full bg-gray-200 overflow-hidden mb-3">
+              <img
+                src="https://via.placeholder.com/150"
+                className="w-full h-full object-cover"
+              />
             </div>
+
+            <button className="px-4 py-1.5 bg-gray-200 rounded text-sm">
+              Upload Photo
+            </button>
+
+            <p className="text-xs text-gray-500 mt-2">
+              JPG or PNG, max 5MB
+            </p>
           </div>
 
         </div>
 
-        {/* ===== NEXT BUTTON ===== */}
-        <div className="max-w-5xl mx-auto px-10 mt-8 flex justify-end">
+        
+        <div className="max-w-6xl mx-auto px-10 flex justify-end mt-4">
           <button
             onClick={() => navigate("/dashboard")}
-            className="bg-[#FF321F] text-white text-sm px-6 py-2 rounded-md hover:bg-red-600 transition"
+            className="bg-[#FF321F] text-white px-6 py-2 rounded text-sm"
           >
             Next
           </button>
         </div>
+
       </main>
 
-      {/* ================= FOOTER ================= */}
-      <footer className="w-full flex flex-row items-center justify-between px-32 py-4 bg-white mt-8">
-        <div className="flex gap-4 text-sm">
-          <span>About</span>
-          <span>Resources</span>
-          <span>Legal</span>
-        </div>
-
-        <div className="flex gap-6">
-          <img src="img/logo/socal/linkedin.svg" alt="" />
-          <img src="img/logo/socal/tuter.svg" alt="" />
-          <img src="img/logo/socal/Vector.svg" alt="" />
+      <footer className="border-t mt-4">
+        <div className="max-w-6xl mx-auto px-10 py-3 flex justify-between text-sm">
+          <div className="flex gap-4">
+            <span>About</span>
+            <span>Resources</span>
+            <span>Legal</span>
+          </div>
+          <div className="flex gap-6">
+            <img src="img/logo/socal/linkedin.svg" />
+            <img src="img/logo/socal/tuter.svg" />
+            <img src="img/logo/socal/Vector.svg" />
+          </div>
         </div>
       </footer>
+
     </div>
   );
 };
