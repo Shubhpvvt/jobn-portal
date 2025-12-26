@@ -4,20 +4,18 @@ const Onboarding = () => {
   return (
     <div className="min-h-screen w-full flex flex-col bg-gray-50">
 
-    
-      <header className="flex w-full justify-between items-center h-14 bg-[#FF321F] px-4 sm:px-6 md:px-10">
+     
+      <header className="flex w-full justify-between items-center h-14 bg-[#FF321F] px-10">
         <div className="flex items-center gap-2">
           <div className="w-7 h-7">
             <img src="img/logo/Sign-Up/Group.svg" alt="logo" />
           </div>
-          <h1 className="text-lg sm:text-xl md:text-2xl text-white font-bold italic">
+          <h1 className="text-2xl text-white font-bold italic">
             CTRMExpertPlatform
           </h1>
         </div>
 
-        <h2 className="hidden sm:block text-white text-sm font-medium">
-          Home
-        </h2>
+        <h2 className="text-white text-sm font-medium">Home</h2>
 
         <div className="flex items-center gap-3">
           <div className="bg-slate-500 w-9 h-9 flex items-center justify-center rounded-xl">
@@ -32,16 +30,16 @@ const Onboarding = () => {
         </div>
       </header>
 
+      
       <main className="flex-1 w-full">
 
-        <div className="w-full max-w-5xl mx-auto px-4 py-6">
-          <h2 className="text-lg sm:text-xl font-semibold mb-6">
+        <div className="w-full max-w-5xl mx-auto px-10 py-6">
+          <h2 className="text-xl font-semibold mb-6">
             Onboarding Progress
           </h2>
 
-          <div className="flex flex-col md:flex-row gap-4 md:gap-0 md:items-center md:justify-between">
+          <div className="flex items-center justify-between">
 
-           
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center text-sm font-medium">
                 1
@@ -51,9 +49,8 @@ const Onboarding = () => {
               </span>
             </div>
 
-            <div className="hidden md:flex-1 h-px bg-gray-300 mx-4" />
+            <div className="flex-1 h-px bg-gray-300 mx-4" />
 
-           
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
                 2
@@ -63,9 +60,8 @@ const Onboarding = () => {
               </span>
             </div>
 
-            <div className="hidden md:flex-1 h-px bg-gray-300 mx-4" />
+            <div className="flex-1 h-px bg-gray-300 mx-4" />
 
-         
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
                 3
@@ -75,7 +71,7 @@ const Onboarding = () => {
               </span>
             </div>
 
-            <div className="hidden md:flex-1 h-px bg-gray-300 mx-4" />
+            <div className="flex-1 h-px bg-gray-300 mx-4" />
 
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full border border-gray-400 text-gray-700 flex items-center justify-center text-sm font-medium">
@@ -87,13 +83,14 @@ const Onboarding = () => {
             </div>
           </div>
         </div>
-      
-        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row gap-8 items-start">
 
-         
-          <div className="w-full md:w-1/2">
-            <div className="w-full bg-white shadow-sm p-4 sm:p-6 md:p-8">
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6">
+       
+        <div className="max-w-5xl mx-auto px-10 flex flex-row gap-8 items-start">
+
+          
+          <div className="w-1/2">
+            <div className="w-full bg-white shadow-sm p-8">
+              <h2 className="text-xl font-semibold text-gray-900 mb-6">
                 Your Personal Details
               </h2>
 
@@ -119,9 +116,9 @@ const Onboarding = () => {
             </div>
           </div>
 
-          
-          <div className="w-full md:w-1/2 p-4 sm:p-6 md:p-8">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-8 text-center md:text-left">
+         
+          <div className="w-1/2 p-8">
+            <h2 className="text-xl font-semibold text-gray-900 mb-8">
               Profile Picture
             </h2>
 
@@ -147,8 +144,7 @@ const Onboarding = () => {
         </div>
       </main>
 
-      
-      <footer className="w-full flex flex-col sm:flex-row items-center justify-between gap-4 px-4 sm:px-8 md:px-32 py-4 bg-white">
+      <footer className="w-full flex flex-row items-center justify-between px-32 py-4 bg-white">
         <div className="flex gap-4 text-sm">
           <span>About</span>
           <span>Resources</span>
