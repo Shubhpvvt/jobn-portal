@@ -17,25 +17,11 @@ function App() {
   return (
     <Routes>
 
-      {/* ✅ LOGIN (FIXED LAYOUT ADD) */}
-      <Route
-        path="/"
-        element={
-          <FixedLayout>
-            <Login />
-          </FixedLayout>
-        }
-      />
-      <Route
-        path="/login"
-        element={
-          <FixedLayout>
-            <Login />
-          </FixedLayout>
-        }
-      />
+      {/* ✅ LOGIN — NEVER wrap in FixedLayout */}
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
 
-      {/* ✅ ONBOARDING */}
+      {/* ✅ APP PAGES — Fixed desktop layout */}
       <Route
         path="/onboarding"
         element={
@@ -45,7 +31,6 @@ function App() {
         }
       />
 
-      {/* ✅ DASHBOARD */}
       <Route
         path="/dashboard"
         element={
@@ -55,7 +40,6 @@ function App() {
         }
       />
 
-      {/* ✅ OTHER PAGES */}
       <Route
         path="/profile"
         element={
